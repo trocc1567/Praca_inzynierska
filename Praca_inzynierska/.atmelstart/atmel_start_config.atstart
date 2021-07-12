@@ -1,0 +1,290 @@
+format_version: '2'
+name: My Project
+versions:
+  api: '1.0'
+  backend: 1.8.580
+  commit: f3d8d96e294de8dee688333bbbe8d8458a4f6b4c
+  content: unknown
+  content_pack_name: unknown
+  format: '2'
+  frontend: 1.8.580
+  packs_version_avr8: 1.0.1463
+  packs_version_qtouch: unknown
+  packs_version_sam: 1.0.1726
+  version_backend: 1.8.580
+  version_frontend: ''
+board:
+  identifier: CustomBoard
+  device: ATxmega256A3BU-AU
+details: null
+application: null
+middlewares: {}
+drivers:
+  OSC:
+    user_label: OSC
+    definition: Atmel:XMEGA_A_B_C_Drivers:1.0.0::ATxmega256A3BU-AU::OSC::driver_config_definition::OSC::Drivers:OSC:Init
+    functionality: System
+    api: Drivers:OSC:Init
+    configuration:
+      $input: 2000000
+      $input_id: External Crystal Oscillator 0.4-16MHz
+      RESERVED_InputFreq: 2000000
+      RESERVED_InputFreq_id: External Crystal Oscillator 0.4-16MHz
+      _$freq_output_External Crystal Oscillator 0.4-16MHz: '2000000'
+      _$freq_output_PLL: 2000000
+      dfll2m_calib_a: 0
+      dfll2m_calib_b: 0
+      dfll2m_calib_ref: false
+      dfll2m_comp_1: 0
+      dfll2m_comp_2: 0
+      dfll32m_calib_a: 0
+      dfll32m_calib_b: 0
+      dfll32m_calib_ref: Internal 32.768 kHz RC Oscillator
+      dfll32m_comp_1: 0
+      dfll32m_comp_2: 0
+      enable_dfll2m: false
+      enable_dfll32m: false
+      enable_pll: false
+      enable_xosc32k: true
+      osc2m_cal_override: false
+      osc2m_enable: true
+      osc32k_calib: 0
+      osc32k_enable: false
+      osc32m_cal_override: false
+      osc32m_enable: false
+      osc_xoscctrl_x32klpm: false
+      osc_xoscctrl_xoscsel: External Clock - 6 CLK
+      osc_xoscfail_pllfden: false
+      osc_xoscfail_pllfdif: false
+      osc_xoscfail_xoscfden: false
+      osc_xoscfail_xoscfdif: false
+      pll_div: false
+      pll_fac: 1
+      pll_src: External Crystal Oscillator 0.4-16MHz
+      xosc32k_klpm: false
+      xosc_enable: false
+      xosc_frequency: 2000000
+      xosc_frqrange: 12 - 16 MHz
+      xosc_owr: true
+    optional_signals: []
+    variant: null
+    clocks:
+      domain_group: null
+  CLK:
+    user_label: CLK
+    definition: Atmel:XMEGA_A_B_C_Drivers:1.0.0::ATxmega256A3BU-AU::CLK::driver_config_definition::CLK::Drivers:CLK:Init
+    functionality: System
+    api: Drivers:CLK:Init
+    configuration:
+      $input: 32000
+      $input_id: External Clock from TOSC1
+      RESERVED_InputFreq: 32000
+      RESERVED_InputFreq_id: External Clock from TOSC1
+      _$freq_output_CLK CPU/PER: 2000000
+      _$freq_output_CLK PER2: 2000000
+      _$freq_output_CLK PER4: 2000000
+      _$freq_output_CLK USB: 2000000
+      _$freq_output_CPU: 2000000
+      _$freq_output_NVM: 2000000
+      _$freq_output_RAM: 2000000
+      _$freq_output_RTC source: 32000
+      clk_cpu_clock_source: CLK PER2
+      clk_lock_lock: false
+      clk_psctrl_psadiv: Divide by 1
+      clk_psctrl_psbcdiv: Divide B by 1 and C by 1
+      clk_sys_source_oscillator: External Crystal Oscillator 0.4-16MHz
+      clk_usb_clock_prescaler: 0
+      clk_usb_source_oscillator: PLL
+      cpu_clock_prescaler: 0
+      cpu_clock_source: CLK CPU/PER
+      enable_clk_cpu_source: true
+      enable_clk_cpu_source_enable: true
+      enable_clk_sys_source: true
+      enable_clk_sys_source_enable: true
+      enable_clk_usb_source: false
+      enable_cpu_source: true
+      enable_lp_source: false
+      enable_per2_source: true
+      enable_per2_source_enable: true
+      enable_per4_source: true
+      enable_per4_source_enable: true
+      enable_rtc_source: true
+      enable_rtc_source_enable: true
+      lp_source_oscillator: Ultra Low Power Internal Oscillator
+      nvm_clock_source: CLK CPU/PER
+      per2_clock_source: CLK PER4
+      per4_clock_source: CLK SYS source
+      ram_clock_source: CLK CPU/PER
+      rtc_divider: false
+      rtc_source_oscillator: External Clock from TOSC1
+    optional_signals: []
+    variant: null
+    clocks:
+      domain_group:
+        nodes:
+        - name: CPU
+          input: CPU
+          external: false
+          external_frequency: 0
+        configuration: {}
+  RTC_0:
+    user_label: RTC_0
+    definition: Atmel:XMEGA_A_B_C_Drivers:1.0.0::ATxmega256A3BU-AU::RTC32::driver_config_definition::RTC32::Drivers:RTC32:Init
+    functionality: RTC
+    api: Drivers:RTC32:Init
+    configuration:
+      rtc32_cnt: 0
+      rtc32_comp: 0
+      rtc32_ctrl_enable: true
+      rtc32_intctrl_compintlvl: Interrupt Disabled
+      rtc32_intctrl_ovfintlvl: High Level
+      rtc32_per: 10
+      vbat_accen_enable: true
+      vbat_highesr_enable: true
+      vbat_reset_enable: true
+      vbat_xoscen_enable: true
+      vbat_xoscfden_enable: true
+      vbat_xoscsel_enable: false
+    optional_signals: []
+    variant: null
+    clocks:
+      domain_group:
+        nodes:
+        - name: RTC
+          input: RTC source
+          external: false
+          external_frequency: 0
+        configuration:
+          rtc_clock_source: RTC source
+  PMIC:
+    user_label: PMIC
+    definition: Atmel:XMEGA_A_B_C_Drivers:1.0.0::ATxmega256A3BU-AU::PMIC::driver_config_definition::PMIC::Drivers:PMIC:Init
+    functionality: System
+    api: Drivers:PMIC:Init
+    configuration:
+      cpu_sreg_i: true
+      inc_isr_harness: false
+      pmic_ctrl_hilvlen: true
+      pmic_ctrl_ivsel: false
+      pmic_ctrl_lolvlen: false
+      pmic_ctrl_medlvlen: false
+      pmic_ctrl_rren: false
+    optional_signals: []
+    variant: null
+    clocks:
+      domain_group: null
+  SLEEP:
+    user_label: SLEEP
+    definition: Atmel:XMEGA_A_B_C_Drivers:1.0.0::ATxmega256A3BU-AU::SLEEP::driver_config_definition::SLEEP::Drivers:SLEEP:Init
+    functionality: System
+    api: Drivers:SLEEP:Init
+    configuration:
+      pr_prgen_aes: false
+      pr_prgen_dma: false
+      pr_prgen_evsys: false
+      pr_prgen_usb: false
+      pr_prpa_aca: false
+      pr_prpa_adca: false
+      pr_prpb_acb: false
+      pr_prpb_adcb: false
+      pr_prpb_dacb: false
+      pr_prpc_hiresc: false
+      pr_prpc_spic: false
+      pr_prpc_tc0c: false
+      pr_prpc_tc1c: false
+      pr_prpc_twic: false
+      pr_prpc_usart0c: false
+      pr_prpc_usart1c: false
+      pr_prpd_hiresd: false
+      pr_prpd_spid: false
+      pr_prpd_tc0d: false
+      pr_prpd_tc1d: false
+      pr_prpd_usart0d: true
+      pr_prpd_usart1d: false
+      pr_prpe_hirese: false
+      pr_prpe_tc0e: false
+      pr_prpe_tc1e: false
+      pr_prpe_twie: false
+      pr_prpe_usart0e: false
+      pr_prpf_hiresf: false
+      pr_prpf_tc0f: false
+      pr_prpf_usart0f: false
+      sleep_ctrl_sen: true
+      sleep_ctrl_smode: Power-save Mode
+    optional_signals: []
+    variant: null
+    clocks:
+      domain_group: null
+  USART_0:
+    user_label: USART_0
+    definition: Atmel:XMEGA_A_B_C_Drivers:1.0.0::ATxmega256A3BU-AU::USARTD0::driver_config_definition::Async.Polled.Mode::Drivers:USART:Basic
+    functionality: USART
+    api: Drivers:USART:Basic
+    configuration:
+      baud_rate: 9600
+      printf_support: true
+      usart_ctrlb_clk2x: false
+      usart_ctrlb_mpcm: false
+      usart_ctrlb_rxen: true
+      usart_ctrlb_txen: true
+      usart_ctrlc_chsize: 'Character size: 8 bit'
+      usart_ctrlc_cmode: Async Polled Mode
+      usart_ctrlc_pmode: Even Parity
+      usart_ctrlc_sbmode: 1 stop bit
+      usart_ctrlc_ucpha: Sample DATA on Falling edge of XCK
+      usart_ctrlc_udord: Send MSB of DATA First
+    optional_signals: []
+    variant:
+      specification: CMODE=0
+      required_signals:
+      - name: USARTD0/RXD
+        pad: PD2
+        label: RXD
+      - name: USARTD0/TXD
+        pad: PD3
+        label: TXD
+    clocks:
+      domain_group:
+        nodes:
+        - name: USART
+          input: CLK CPU/PER
+          external: false
+          external_frequency: 0
+        configuration:
+          usart_clock_source: CLK CPU/PER
+pads:
+  PD2:
+    name: PD2
+    definition: Atmel:XMEGA_A_B_C_Drivers:1.0.0::ATxmega256A3BU-AU::pad::PD2
+    mode: Digital input
+    user_label: PD2
+    configuration: null
+  PD3:
+    name: PD3
+    definition: Atmel:XMEGA_A_B_C_Drivers:1.0.0::ATxmega256A3BU-AU::pad::PD3
+    mode: Digital output
+    user_label: PD3
+    configuration: null
+toolchain_options:
+- definition:
+    identifier: Atmel:XMEGA_A_B_C_Drivers:1.0.0::ATxmega256A3BU-AU::environment_definition::All:Atmel.Studio:7.0.0
+  configuration:
+    compiler_config:
+      avrgcc_compiler_miscellaneous_OtherFlags: -std=gnu99
+    linker_config:
+      avrgcc_linker_miscellaneous_LinkerFlags: ''
+- definition:
+    identifier: Atmel:XMEGA_A_B_C_Drivers:1.0.0::ATxmega256A3BU-AU::environment_definition::All:Microchip.Studio.gcc:7.0.0
+  configuration:
+    compiler_config:
+      avrgcc_compiler_miscellaneous_OtherFlags: -std=gnu99
+    linker_config:
+      avrgcc_linker_miscellaneous_LinkerFlags: ''
+- definition:
+    identifier: Atmel:XMEGA_A_B_C_Drivers:1.0.0::ATxmega256A3BU-AU::environment_definition::All:Microchip.Studio.xc8:7.0.0
+  configuration:
+    compiler_config:
+      xc8_compiler_miscellaneous_OtherFlags: -std=gnu99
+    linker_config:
+      xc8_linker_miscellaneous_LinkerFlags: ''
+static_files: []

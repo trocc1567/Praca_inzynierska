@@ -1,0 +1,13 @@
+/*------------------------------------------------------------------------*/ /**
+\defgroup doc_driver_rtc32 RTC32 Drivers
+
+
+\section doc_driver_rtc32_basic_and_practice RTC32 Basics and Best Practice
+
+The RTC32 peripheral is a 32-bit counter that typically runs continuously to keep track of time even in low power sleep modes. 
+
+NOTE: Reference clock is typically a 1Hz prescaled output from a high accuracy crystal of 32.768kHz.
+
+*/
+
+
