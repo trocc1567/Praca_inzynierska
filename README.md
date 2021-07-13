@@ -1,4 +1,4 @@
-# Patryk_Troc_praca_inzynierska
+# Praca_inzynierska
 
 Wersja programu: 1.0
 
